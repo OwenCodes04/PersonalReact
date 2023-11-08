@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
-import QATable from './QATable';
-
-function DividerQA(props) {
-    const [pdfName, setPdfName] = useState('');
-    const [questionsPdfName, setQuestionsPdfName] = useState('');
-
-    const handlePdfUpload = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            setPdfName(file.name);
-        }
-    };
+import ProjectsTable from './ProjectsTable';
 
     return (
         <div className="flex flex-col w-full h-full" style={{ paddingLeft: '10px', paddingRight: '10px', marginBottom: '35px' }}>
@@ -26,11 +15,10 @@ function DividerQA(props) {
             <div className="divider mx-auto w-4/5"></div>
             <div className="grid flex-grow card bg-[#F7F7F7] rounded-box place-items-center border border-transparent h-full">
 
-                <QATable></QATable>
+                <ProjectsTable></ProjectsTable>
 
             </div>
         </div>
     );
-}
 
 export default DividerProjects;
